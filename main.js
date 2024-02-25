@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let newQrCodeUrl = ""
 
     const generateCode = () => {
+        printableArea.innerHTML=""
         let insertedText = text.value
         console.log(insertedText)
         const insertedTextRemovedSpaces = insertedText.replace(" ", "")
@@ -31,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Zadej počet etiket !!!')
             return
         }
+
+    
         printableArea.innerHTML = ''
         let label = ''
         allLabels = ''
@@ -57,6 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
         allLabels += label
 
         printableArea.innerHTML += allLabels
+
+        let bottomY = window.innerHeight
+        console.log('bottomY', )
+        window.scrollTo(0,bottomY+ 200);
 
     }
     text.addEventListener("keyup", generateCode)
