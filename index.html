@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="non-printable">
+        <h1 class="title"> Sladovna - QR Code Generator</h1>
+        <h2>Autor - Hacker Humňák J.Š.</h2>
+        <div id="form-container">
+            <div class="form-wrapper">
+                <Label>text</Label>
+                <br>
+                <!-- <input type="text" name="text" id="text"> -->
+                <textarea name="text" id="text" cols="30" rows="10" placeholder="Jednotlivé položky oddělujte čárkami, mezery nepoužívejte, budou odstraněny ....Příklad: 25-2-2024,Plzeňský-slad,zaměstnanci:13,14,18"></textarea>
+                <br>
+                <Label>počáteční číslo sekvence</Label>
+                <br>
+                <input type="number" name="start" id="start">
+                <br>
+                <Label>počet etiket</Label>
+                <br>
+                <input type="number" name="start" id="end">
+            </div>
+            <br>
+            <div id="output">
+                
+            </div>
+            <button type="button" id="print">Print</button>
+            <br>
+        </div>
+    </header>
+    <main>
+        <div id="printable">
+            
+        </div>
+    </main>
+    <!-- API -->
+    <!-- <img src=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example " /> -->
+</body>
+<script src="main.js"></script>
+
+</html>

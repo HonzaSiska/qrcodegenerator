@@ -1,0 +1,47 @@
+body{
+    margin-top: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+header{
+    margin-bottom: 20px;
+}
+input[type="number"],textarea{
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+#printable{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: left;
+
+}
+.label-wrapper{
+  
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+}
+.title{
+    color: rgb(165, 97, 42);
+}
+.label-subwrapper{
+    padding: 10px;
+}
+.label-title{
+    font-size: 50px;
+}
+
+@media print {
+    /* Styles for printable content */
+    .printable {
+      display: block; /* Ensure the element is displayed when printing */
+    }
+  
+    /* Styles for non-printable content */
+    .non-printable {
+      display: none; /* Hide the element from printing */
+    }
+  }
