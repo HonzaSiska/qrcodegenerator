@@ -24,6 +24,14 @@ input[type="number"],textarea{
     border-right: 2px solid black;
     border-top: 2px solid black;
 }
+.logo-wrapper{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 80px;
+    margin-right: 20px;
+}
 .title{
     color: rgb(165, 97, 42);
 }
