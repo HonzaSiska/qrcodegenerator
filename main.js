@@ -61,12 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         printableArea.innerHTML += allLabels
 
-        let bottomY = window.innerHeight
-        console.log('bottomY', )
-        window.scrollTo(0,bottomY+ 200);
+        // let bottomY = window.innerHeight
+        // console.log('bottomY', )
+        window.scrollTo(0,200);
 
     }
     text.addEventListener("keyup", generateCode)
     printBtn.addEventListener("click", print)
+    startOfSequence.addEventListener("keyup", () => {
+        printableArea.innerHTML = ''
+    })
+    endOfSequence.addEventListener("keyup", () => {
+        printableArea.innerHTML = ''
+    })
 })
 
