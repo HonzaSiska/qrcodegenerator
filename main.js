@@ -4,10 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const endOfSequence = document.querySelector("#end")
     const outputImagePlaceholder = document.querySelector("#output")
     const printBtn = document.querySelector("#print")
-    let printableArea = document.querySelector("#printable")
+    // let printableArea = document.querySelector("#printable")
     let newQrCodeUrl = ""
 
     const generateCode = () => {
+        let printableArea = document.querySelector("#printable")
         printableArea.innerHTML=""
         let insertedText = text.value
         console.log(insertedText)
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return
         }
 
-    
+        let printableArea = document.querySelector("#printable")
         printableArea.innerHTML = ''
         let label = ''
         allLabels = ''
