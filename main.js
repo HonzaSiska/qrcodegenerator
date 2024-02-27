@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const insertedTextRemovedSpaces = insertedText.replace(" ", "")
         newQrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${insertedTextRemovedSpaces}`
         
-        outputImagePlaceholder.innerHTML = `<img src=${newQrCodeUrl}/>`
+        outputImagePlaceholder.innerHTML = `<img src=${newQrCodeUrl} />`
       
     }
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let label = ''
         let allLabels = ''
         let counter = Number(startOfSequence.value)
-        
+
         for (let i = 0; i <= Number(endOfSequence.value) - 1 ; i++) {
             label += `
                 <div class="label-wrapper">
