@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const printBtn = document.querySelector("#print")
     // let printableArea = document.querySelector("#printable")
     let newQrCodeUrl = ""
+    let printableArea = document.querySelector("#printable")
 
     const generateCode = () => {
         let printableArea = document.querySelector("#printable")
-        printableArea.innerHTML=""
+        printableArea.innerHTML = ""
         let insertedText = text.value
         console.log(insertedText)
         const insertedTextRemovedSpaces = insertedText.replace(" ", "")
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return
         }
 
-        let printableArea = document.querySelector("#printable")
+       
         printableArea.innerHTML = ''
         let label = ''
         allLabels = ''
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         </div>
-    `
+        `
         }
 
         allLabels += label
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // let bottomY = window.innerHeight
         // console.log('bottomY', )
-        window.scrollTo(0,200);
+        window.scrollTo(0, 200);
 
     }
     text.addEventListener("keyup", generateCode)
