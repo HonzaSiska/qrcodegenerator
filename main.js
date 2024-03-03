@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const insertedTextRemovedSpaces = insertedText.replace(" ", "")
         console.log('testing qr obsah',insertedTextRemovedSpaces)
-        alert('works')
+    
         newQrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${insertedTextRemovedSpaces}`
 
         outputImagePlaceholder.innerHTML = `<img src=${newQrCodeUrl} />`
