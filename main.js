@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         printableArea.innerHTML = ""
 
         let insertedText = text.value
-        console.log(insertedText)
 
         const insertedTextRemovedSpaces = insertedText.replace(" ", "")
         newQrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${insertedTextRemovedSpaces}`
@@ -88,16 +87,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const parseGoogleUrl = () => {
-        const removeSlashes = docsLinkField.value.split("/")
 
+        const urlParams = window.location.href
+        const brokenDownUrl = urlParams.split("/")
+        console.log('URL',brokenDownUrl)
+        
+
+        const removeSlashes = docsLinkField.value.split("/")
+        // console.log('sbroken down url', removeSlashes)
         let host
 
         // Change urls when deployed
-        if (removeSlashes[0] === 'https') {
-            host = 'public'
-        } else {
+        if (brokenDownUrl[0] == 'http:') {
             host = 'local'
+        } else {
+            host = 'public'
         }
+
+        console.log('host',host)
 
         const param = removeSlashes[6]
         const type = removeSlashes[3]
