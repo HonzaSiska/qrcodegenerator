@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(docsParam)
     // const getParamFromUrl = urlParams.split('?')
     // console.log(getParamFromUrl); // Output: "John"
-    const result = document.querySelector("#embeded-doc")
+    // const result = document.querySelector("#embeded-doc")
 
     // const html = `<iframe src="https://docs.google.com/document/d/e/${param}/pub?embedded=true"></iframe>`
 
