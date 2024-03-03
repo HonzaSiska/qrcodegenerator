@@ -1,17 +1,35 @@
 body{
     margin-top: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(250, 239, 230);
 }
 header{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+iframe{
+    background-color: white;
+    border: 1px solid rgb(214, 212, 212);
 }
 input[type="number"],textarea{
     border-radius: 5px;
     border: 1px solid gray;
+    
+    
+}
+.number-field{
+    width:150px;
+}
+textarea{
+    width: 300px;
+}
+#text{
+    font-weight: 700;
+    color:rgb(39, 142, 245);
+    font-style: italic;
 }
 
 #printable{
-   
+   background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -26,7 +44,10 @@ input[type="number"],textarea{
 }
 .logo-wrapper{
     display: flex;
-    align-items: center;
+    align-items: center;   
+}
+.label-header{
+    min-height: 100px;
 }
 #logo{
     width: 80px;
@@ -42,13 +63,79 @@ input[type="number"],textarea{
     font-size: 50px;
 }
 #print{
-    color:rgb(246, 198, 54);
+    color:rgb(253, 250, 242);
     background-color: rgb(165, 97, 42) ;
     border-radius: 3px;
     border: 1px solid gray;
     padding: 10px;
     width: 150px;
 }
+#print:hover{
+    opacity: 0.7;
+    transition: 300ms;
+    cursor: pointer;
+}
+.form-wrapper{
+    margin-bottom: 25px;
+}
+
+#embeded-doc{
+    width: 100%;
+    height:600px;
+  }
+  .nav-button{
+    margin-left: 30px;
+    background-color: rgb(165, 97, 42) ;
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 5px;
+
+  }
+  .nav-button:hover{
+    transition: 300ms;
+    opacity: 0.7;
+  }
+  .icons-wrapper{
+    margin-top: 15px;
+    display: flex;
+  }
+  #sheets-icon{
+    width: 65px;
+    height: 61px;
+    cursor: pointer;
+  }
+  #docs-icon{
+    width: 47px;
+    height: 59px;
+    cursor: pointer;
+  }
+  .icons-wrapper img:hover{
+    opacity: 0.7;
+    transition: 300ms;
+  }
+
+  .hidden{
+    display: none;
+  }
+  .invisible{
+    visibility: none;
+  }
+  .caret > img{
+    width: 10px;
+    opacity: 0.6;
+  }
+  .caret{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
 @media print {
     /* Styles for printable content */
     .printable {
@@ -60,3 +147,5 @@ input[type="number"],textarea{
       display: none; /* Hide the element from printing */
     }
   }
+
+ 

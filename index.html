@@ -17,7 +17,9 @@
             <img src="logo-sladovna.png" alt="logo" id="logo">
             <h1 class="title">QR Code Generator</h1>
         </div>
-        <h2>Autor - Hacker Humňák J.Š.</h2>
+    </header>
+    <section>
+        <!-- <h2>Autor - Hacker Humňák J.Š.</h2> -->
         <div id="form-container">
             <div class="form-wrapper">
                 <Label>text</Label>
@@ -26,22 +28,51 @@
                 <textarea name="text" id="text" cols="30" rows="10"
                     placeholder="Jednotlivé položky oddělujte čárkami, mezery nepoužívejte, budou odstraněny ....Příklad: 25-2-2024,Plzeňský-slad,zaměstnanci:13,14,18"></textarea>
                 <br>
+
+            </div>
+            <div class="form-wrapper">
                 <Label>počáteční číslo série</Label>
                 <br>
-                <input type="number" name="start" id="start">
+                <input class='number-field' type="number" name="start" id="start">
                 <br>
                 <Label>počet etiket</Label>
                 <br>
-                <input type="number" name="start" id="end">
+                <input class='number-field' type="number" name="start" id="end">
             </div>
-            <br>
+            <div class="form-wrapper">
+                <Label>Google docs link</Label>
+                <div class="icons-wrapper">
+                    <div id="arrow-wrapper">
+                        <img src="/google-sheets.png" id='sheets-icon' alt="icon-sheets">
+                        <div class='caret'>
+                            <img id='left-caret' class="hidden" src="/caret-down.png" alt="">
+                        </div>
+                    </div>
+                    <div id="arrow-wrapper">
+                        <img src="/google_docs.png" id='docs-icon' alt="icon-docs">
+                        <div class='caret'>
+                            <img id="right-caret" class="hidden" src="/caret-down.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div id='docs-wrapper' class="docs-wrapper hidden">
+                    <!-- <input type="text" name="text" id="text"> -->
+                    <textarea name="text2" id="text2" cols="30" rows="10" placeholder=""></textarea>
+                </div>
+                <br>
+            </div>
             <div id="output">
 
             </div>
+            <br>
+
             <button type="button" id="print">Zobrazit etikety</button>
             <br>
         </div>
-    </header>
+    </section>
+
+
     <main>
         <div id="printable">
 
