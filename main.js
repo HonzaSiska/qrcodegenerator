@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let insertedText = text.value
 
         const insertedTextRemovedSpaces = insertedText.replace(" ", "")
+        console.log('testing qr obsah',insertedTextRemovedSpaces)
+        alert('works')
         newQrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${insertedTextRemovedSpaces}`
 
         outputImagePlaceholder.innerHTML = `<img src=${newQrCodeUrl} />`
@@ -131,6 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
         : host = `https://honzasiska.github.io/qrcodegenerator/data.html?param=${param}&document=${state.docs}`
       
         text.value = newLink
+
+        console.log('new link',newLink)
 
         generateCode()
 
