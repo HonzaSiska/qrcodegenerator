@@ -23,9 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let insertedText = text.value
 
-        const insertedTextRemovedSpaces = insertedText.replace(" ", "")
+        const insertedTextRemovedSpaces = encodeURIComponent(insertedText.replace(" ", ""))
         console.log('testing qr obsah',insertedTextRemovedSpaces)
     
+        newQrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${insertedTextRemovedSpaces}`
+        console.log('new url for qr', newQrCodeUrl)
+
+        outputImagePlaceholder.innerHTML = `<img src=${newQrCodeUrl} />`
+
+    }
+
+    const generateCodeForEmbededPage = () => {
+
+        let printableArea = document.querySelector("#printable")
+        printableArea.innerHTML = ""
+
+        let insertedText = text.value
+
+        const insertedTextRemovedSpaces = insertedText.replace(" ", "")
+        console.log('testing qr obsah',insertedTextRemovedSpaces)
+     
         newQrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${insertedTextRemovedSpaces}`
 
         outputImagePlaceholder.innerHTML = `<img src=${newQrCodeUrl} />`
@@ -125,12 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('type', type)
         console.log(state)
 
-        // const newLink =
-        //     `http://127.0.0.1:5500/data.html?param=${param}&document=${state.docs}`
 
         const newLink =  host === 'local' 
-        ? host = `http://127.0.0.1:5500/data.html?param=${param}&document=${state.docs}`
-        : host = `https://honzasiska.github.io/qrcodegenerator/data.html?param=${param}&document=${state.docs}`
+        ? host = `http://127.0.0.1:5500/display.html?param=${param}&document=${state.docs}`
+        : host = `https://honzasiska.github.io/qrcodegenerator/display.html?param=${param}&document=${state.docs}`
       
         text.value = newLink
 
